@@ -23,6 +23,14 @@
     width: 40px;
     margin-left: 10px;
     height: 40px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 0;
+    border-left-width: 2px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
 }
 
 .unactivemarks {
@@ -32,4 +40,12 @@
     background-color: rgb(137, 0, 0);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 0;
+    border-left-width: 2px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
 }
