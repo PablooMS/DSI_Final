@@ -4,7 +4,7 @@
         <ui:VisualElement name="CharacterMark" class="marks" />
         <ui:VisualElement name="SettingsMark" class="unactivemarks" />
     </ui:VisualElement>
-    <ui:VisualElement name="Menus" style="flex-grow: 1; height: 365px; flex-direction: row;">
+    <ui:VisualElement name="Menus" style="flex-grow: 1; height: 500px; flex-direction: row;">
         <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row;">
             <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px;" />
             <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px;" />

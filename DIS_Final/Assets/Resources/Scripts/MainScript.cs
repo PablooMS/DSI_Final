@@ -23,6 +23,8 @@ public class MainScript : MonoBehaviour
 
         characterPageSelector.RegisterCallback<ClickEvent>(ChangeToCharacters);
         settingsPageSelector.RegisterCallback<ClickEvent>(ChangeToSettings);
+        characterPageSelector.AddManipulator(new ButtonManipulator());
+        settingsPageSelector.AddManipulator(new ButtonManipulator());
     }
 
     private void ChangeToSettings(ClickEvent e)
