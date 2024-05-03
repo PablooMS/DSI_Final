@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MainStyles.uss?fileID=7433441132597879392&amp;guid=424357f3b9532c2479e99947d087b621&amp;type=3#MainStyles" />
+    <ui:VisualElement name="Windows" style="flex-grow: 1; height: -83px; width: 142px; flex-direction: row; justify-content: flex-end; align-self: flex-start; align-items: flex-end;">
+        <ui:VisualElement name="CharacterMark" class="marks" />
+        <ui:VisualElement name="SettingsMark" class="unactivemarks" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Menus" style="flex-grow: 1; height: 365px; flex-direction: row;">
+        <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px;" />
+            <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

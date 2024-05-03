@@ -17,38 +17,38 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
-                            "guid": "938c2293af8e45c43b7d673d1e406580",
+                            "guid": "424357f3b9532c2479e99947d087b621",
                             "type": 3
                         },
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/JosePutero.uss"
+                        "m_OldPath": "Assets/MainStyles.uss"
                     }
                 ],
-                "m_OpenendVisualTreeAssetOldPath": "Assets/Resources/Templates/PCTemplate.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/MainDocument.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "8e42bd2744f87214f863f56c051e95f7",
+                    "guid": "1518fb38824d3ad419d768fb63c81ed3",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "fileID": 7433441132597879392,
-                    "guid": "938c2293af8e45c43b7d673d1e406580",
+                    "guid": "424357f3b9532c2479e99947d087b621",
                     "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "8e42bd2744f87214f863f56c051e95f7",
-                    "UxmlPath": "Assets/Resources/Templates/PCTemplate.uxml",
+                    "UxmlGuid": "1518fb38824d3ad419d768fb63c81ed3",
+                    "UxmlPath": "Assets/MainDocument.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
-                    "CanvasWidth": 521,
-                    "CanvasHeight": 151,
+                    "CanvasWidth": 663,
+                    "CanvasHeight": 407,
                     "MatchGameView": false,
-                    "ZoomScale": 1.25,
+                    "ZoomScale": 0.8999999761581421,
                     "PanOffset": {
-                        "x": 6.864501953125,
-                        "y": 68.14567565917969
+                        "x": 78.118408203125,
+                        "y": 77.92543029785156
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
