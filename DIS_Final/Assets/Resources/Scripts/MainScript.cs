@@ -12,7 +12,7 @@ public class MainScript : MonoBehaviour
     VisualElement characterPageSelector;
     VisualElement settingsPageSelector;
     VisualElement characterPage;
-    VisualElement settingPage;
+    VisualElement settingsPage;
 
     private void OnEnable()
     {
@@ -20,11 +20,18 @@ public class MainScript : MonoBehaviour
 
         characterPageSelector = root.Q<VisualElement>("CharacterMark");
         settingsPageSelector = root.Q<VisualElement>("SettingsMark");
+        characterPage = root.Q<VisualElement>("Menu1");
+        settingsPage = root.Q<VisualElement>("Menu2");
 
         characterPageSelector.RegisterCallback<ClickEvent>(ChangeToCharacters);
         settingsPageSelector.RegisterCallback<ClickEvent>(ChangeToSettings);
         characterPageSelector.AddManipulator(new ButtonManipulator());
         settingsPageSelector.AddManipulator(new ButtonManipulator());
+
+        //[...]
+
+        characterPage.style.display = DisplayStyle.Flex;
+        settingsPage.style.display = DisplayStyle.None;
     }
 
     private void ChangeToSettings(ClickEvent e)
