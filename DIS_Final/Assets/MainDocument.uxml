@@ -1,17 +1,22 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="PCTemplate" src="project://database/Assets/Resources/Templates/PCTemplate.uxml?fileID=9197481963319205126&amp;guid=8e42bd2744f87214f863f56c051e95f7&amp;type=3#PCTemplate" />
     <Style src="project://database/Assets/MainStyles.uss?fileID=7433441132597879392&amp;guid=424357f3b9532c2479e99947d087b621&amp;type=3#MainStyles" />
     <ui:VisualElement name="Windows" style="flex-grow: 1; height: -83px; width: 142px; flex-direction: row; justify-content: flex-end; align-self: flex-start; align-items: flex-end;">
         <ui:VisualElement name="CharacterMark" class="marks" />
         <ui:VisualElement name="SettingsMark" class="unactivemarks" />
     </ui:VisualElement>
-    <ui:VisualElement name="Menus" style="flex-grow: 1; height: 500px; flex-direction: row;">
-        <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible;">
-            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; background-color: rgb(239, 227, 213);" />
-            <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px;" />
+    <ui:VisualElement name="Menus" style="flex-grow: 1; height: 500px; flex-direction: row; align-self: auto; justify-content: flex-start;">
+        <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
+            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; background-color: rgb(239, 227, 213); width: 254px;">
+                <ui:Instance template="PCTemplate" name="PCTemplate" />
+                <ui:Instance template="PCTemplate" name="PCTemplate" />
+                <ui:Instance template="PCTemplate" name="PCTemplate" />
+                <ui:Instance template="PCTemplate" name="PCTemplate" />
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Menu2" style="flex-grow: 1; flex-direction: row; display: flex; visibility: visible;">
-            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px;" />
-            <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px;" />
+        <ui:VisualElement name="Menu2" style="flex-grow: 1; flex-direction: row; display: flex; visibility: visible; flex-shrink: initial;">
+            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; width: 254px;" />
+            <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px; width: 254px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

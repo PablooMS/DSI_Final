@@ -354,6 +354,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Resources/Scripts/ButtonManipulator.cs"
 "Assets/Resources/Scripts/MainScript.cs"
+"Assets/Resources/Scripts/Personaje.cs"
 -langversion:9.0
 
 /deterministic

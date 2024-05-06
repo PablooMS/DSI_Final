@@ -1,13 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
-    <ui:VisualElement name="Personaje" class="pcback">
-        <ui:VisualElement name="ImageCanvas" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 131px; height: 130px;" />
-        <ui:VisualElement name="node" style="flex-grow: 1; width: 374px;">
+    <ui:VisualElement name="Personaje" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
+        <ui:VisualElement name="ImageCanvas" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+        <ui:VisualElement name="node" style="flex-grow: 0; width: 374px;">
             <ui:VisualElement name="texts" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                 <ui:Label tabindex="-1" text="Sans" parse-escape-sequences="true" display-tooltip-when-elided="true" class="charactertext" style="font-size: 18px;" />
                 <ui:Label tabindex="-1" text="Lv. 1" parse-escape-sequences="false" display-tooltip-when-elided="true" class="charactertext" style="font-size: 14px;" />
             </ui:VisualElement>
-            <ui:VisualElement name="lifebar" class="lifebar" style="flex-grow: 1; width: 321px;" />
+            <ui:VisualElement name="lifebar" class="lifebar" style="flex-grow: 0; width: 321px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

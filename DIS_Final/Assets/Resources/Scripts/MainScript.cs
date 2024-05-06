@@ -14,6 +14,8 @@ public class MainScript : MonoBehaviour
     VisualElement characterPage;
     VisualElement settingsPage;
 
+    bool characterActive;
+
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -27,21 +29,42 @@ public class MainScript : MonoBehaviour
         settingsPageSelector.RegisterCallback<ClickEvent>(ChangeToSettings);
         characterPageSelector.AddManipulator(new ButtonManipulator());
         settingsPageSelector.AddManipulator(new ButtonManipulator());
+        //TODO: Añadir los manipuladores a las instancias una vez hayamos terminado la template de personaje
+        //y tengamos las templates unpackeadas
 
         //[...]
 
         characterPage.style.display = DisplayStyle.Flex;
         settingsPage.style.display = DisplayStyle.None;
+        characterActive = true;
     }
 
     private void ChangeToSettings(ClickEvent e)
     {
-
+        if(characterActive)
+        {
+            characterPage.style.display = DisplayStyle.None;
+            settingsPage.style.display = DisplayStyle.Flex;
+            characterPageSelector.RemoveFromClassList("marks");
+            characterPageSelector.AddToClassList("unactivemarks");
+            settingsPageSelector.RemoveFromClassList("unactivemarks");
+            settingsPageSelector.AddToClassList("marks");
+            characterActive = false;
+        }
     }
     
     private void ChangeToCharacters(ClickEvent e)
     {
-
+        if (!characterActive)
+        {
+            characterPage.style.display = DisplayStyle.Flex;
+            settingsPage.style.display = DisplayStyle.None;
+            characterPageSelector.RemoveFromClassList("unactivemarks");
+            characterPageSelector.AddToClassList("marks");
+            settingsPageSelector.RemoveFromClassList("marks");
+            settingsPageSelector.AddToClassList("unactivemarks");
+            characterActive = true;
+        }
     }
 
     // Start is called before the first frame update
