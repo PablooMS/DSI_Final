@@ -27,6 +27,11 @@ public class MainScript : MonoBehaviour
     StatDisplay matkDisplay;
     StatDisplay mdefDisplay;
 
+    VisualElement char1;
+    VisualElement char2;
+    VisualElement char3;
+    VisualElement char4;
+
     Personaje perSelec;
     List<Personaje> list_per;
 
@@ -50,6 +55,10 @@ public class MainScript : MonoBehaviour
         matkDisplay = characterPage.Q<StatDisplay>("matkDis");
         mdefDisplay = characterPage.Q<StatDisplay>("mdefDis");
 
+        char1 = characterPage.Q<VisualElement>("Sans");
+        char2 = characterPage.Q<VisualElement>("Once");
+        char3 = characterPage.Q<VisualElement>("Triton");
+        char4 = characterPage.Q<VisualElement>("Yoel");
 
         characterPageSelector.RegisterCallback<ClickEvent>(ChangeToCharacters);
         equipPageSelector.RegisterCallback<ClickEvent>(ChangeToEquipment);
@@ -76,6 +85,25 @@ public class MainScript : MonoBehaviour
     private void InitPersonajes()
     {
         list_per = new List<Personaje>();
+        Personaje sans = new Personaje("Sans", 1, 2, 0, 2, 0, 3, "", "");
+        Personaje logcel = new Personaje("Once-ler", 34, 3, 1, 0, 3, 2, "", "");
+        Personaje tritonman = new Personaje("Tritonman", 69, 2, 1, 1, 2, 0, "", "");
+        Personaje yoel = new Personaje("Yoel", 20, 1, 1, 3, 2, 2, "", "");
+
+        list_per.Add(sans);
+        list_per.Add(logcel);
+        list_per.Add(tritonman);
+        list_per.Add(yoel); 
+
+        char1.userData = sans;
+        char2.userData = logcel;
+        char3.userData = tritonman;
+        char4.userData = yoel;
+
+        char1.RegisterCallback<ClickEvent>(selecPersonaje);
+        char2.RegisterCallback<ClickEvent>(selecPersonaje);
+        char3.RegisterCallback<ClickEvent>(selecPersonaje);
+        char4.RegisterCallback<ClickEvent>(selecPersonaje);
     }
 
     private void selecPersonaje(ClickEvent e)
