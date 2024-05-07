@@ -68,7 +68,7 @@ public class Personaje
     private string equipmentB;
     public string EquipB
     {
-        get { return equipmentA; }
+        get { return equipmentB; }
         set
         {
             if (equipmentB != value)

@@ -6,9 +6,24 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.IO;
 using UnityEditor;
+using TreeEditor;
 
 public class MainScript : MonoBehaviour
 {
+    List<string> _objsA = new List<string>()
+        {
+            "EspadaSagrada",
+            "ChanclaMaldita",
+            "Nada"
+        };
+    List<string> _objsB = new List<string>()
+        {
+            "EscudoDiamante",
+            "Creeper",
+            "Nada"
+        };
+
+
     VisualElement characterPageSelector;
     VisualElement equipPageSelector;
     VisualElement itemPageSelector;
@@ -18,6 +33,24 @@ public class MainScript : MonoBehaviour
     VisualElement equipPage;
     VisualElement itemPage;
     VisualElement settingsPage;
+
+
+    VisualElement sansEquipPage;
+    VisualElement onceEquipPage;
+    VisualElement trironEquipPage;
+    VisualElement yoelEquipPage;
+
+    DropdownField _listaObjsASans;
+    DropdownField _listaObjsBSans;
+
+    DropdownField _listaObjsAOnce;
+    DropdownField _listaObjsBOnce;
+
+    DropdownField _listaObjsATriton;
+    DropdownField _listaObjsBTriton;
+
+    DropdownField _listaObjsAYoel;
+    DropdownField _listaObjsBYoel;
 
     int pageActive;
 
@@ -31,6 +64,11 @@ public class MainScript : MonoBehaviour
     VisualElement char2;
     VisualElement char3;
     VisualElement char4;
+
+    VisualElement char5;
+    VisualElement char6;
+    VisualElement char7;
+    VisualElement char8;
 
     Personaje perSelec;
     List<Personaje> list_per;
@@ -49,6 +87,11 @@ public class MainScript : MonoBehaviour
         itemPage = root.Q<VisualElement>("Menu3");
         settingsPage = root.Q<VisualElement>("Menu4");
 
+        sansEquipPage = root.Q<VisualElement>("SansEquipDisplay");
+        onceEquipPage = root.Q<VisualElement>("OnceEquipDisplay");
+        trironEquipPage = root.Q<VisualElement>("TritonEquipDisplay");
+        yoelEquipPage = root.Q<VisualElement>("YoelEquipDisplay");
+
         atkDisplay = characterPage.Q<StatDisplay>("atkDis");
         defDisplay = characterPage.Q<StatDisplay>("defDis");
         spdDisplay = characterPage.Q<StatDisplay>("spdDis");
@@ -60,6 +103,7 @@ public class MainScript : MonoBehaviour
         char3 = characterPage.Q<VisualElement>("Triton");
         char4 = characterPage.Q<VisualElement>("Yoel");
 
+
         characterPageSelector.RegisterCallback<ClickEvent>(ChangeToCharacters);
         equipPageSelector.RegisterCallback<ClickEvent>(ChangeToEquipment);
         itemPageSelector.RegisterCallback<ClickEvent>(ChangeToItems);
@@ -68,6 +112,45 @@ public class MainScript : MonoBehaviour
         equipPageSelector.AddManipulator(new ButtonManipulator());
         itemPageSelector.AddManipulator(new ButtonManipulator());
         settingsPageSelector.AddManipulator(new ButtonManipulator());
+
+
+
+
+        char5 = equipPage.Q<VisualElement>("SansE");
+        char6 = equipPage.Q<VisualElement>("OnceE");
+        char7 = equipPage.Q<VisualElement>("TritonE");
+        char8 = equipPage.Q<VisualElement>("YoelE");
+
+        _listaObjsASans = root.Q<DropdownField>("ObjsAtkSans");
+        _listaObjsBSans = root.Q<DropdownField>("ObjsDefSans");
+        _listaObjsASans.choices = _objsA;
+        _listaObjsBSans.choices = _objsB;
+        _listaObjsASans.RegisterValueChangedCallback((value) => CambiarItemA(char5, value));
+        _listaObjsBSans.RegisterValueChangedCallback((value) => CambiarItemB(char5, value));
+
+        _listaObjsAOnce = root.Q<DropdownField>("ObjsAtkOnce");
+        _listaObjsBOnce = root.Q<DropdownField>("ObjsDefOnce");
+        _listaObjsAOnce.choices = _objsA;
+        _listaObjsBOnce.choices = _objsB;
+        _listaObjsAOnce.RegisterValueChangedCallback((value) => CambiarItemA(char6, value));
+        _listaObjsBOnce.RegisterValueChangedCallback((value) => CambiarItemB(char6, value));
+
+        _listaObjsATriton = root.Q<DropdownField>("ObjsAtkTriton");
+        _listaObjsBTriton = root.Q<DropdownField>("ObjsDefTriton");
+        _listaObjsATriton.choices = _objsA;
+        _listaObjsBTriton.choices = _objsB;
+        _listaObjsATriton.RegisterValueChangedCallback((value) => CambiarItemA(char7, value));
+        _listaObjsBTriton.RegisterValueChangedCallback((value) => CambiarItemB(char7, value));
+
+        _listaObjsAYoel = root.Q<DropdownField>("ObjsAtkYoel");
+        _listaObjsBYoel = root.Q<DropdownField>("ObjsDefYoel");
+        _listaObjsAYoel.choices = _objsA;
+        _listaObjsBYoel.choices = _objsB;
+        _listaObjsAYoel.RegisterValueChangedCallback((value) => CambiarItemA(char8, value));
+        _listaObjsBYoel.RegisterValueChangedCallback((value) => CambiarItemB(char8, value));
+
+
+
 
         //TODO: Añadir los manipuladores a las instancias una vez hayamos terminado la template de personaje
         //y tengamos las templates unpackeadas
@@ -100,22 +183,95 @@ public class MainScript : MonoBehaviour
         char3.userData = tritonman;
         char4.userData = yoel;
 
+        char5.userData = sans;
+        char6.userData = logcel;
+        char7.userData = tritonman;
+        char8.userData = yoel;
+
+
         char1.RegisterCallback<ClickEvent>(selecPersonaje);
         char2.RegisterCallback<ClickEvent>(selecPersonaje);
         char3.RegisterCallback<ClickEvent>(selecPersonaje);
         char4.RegisterCallback<ClickEvent>(selecPersonaje);
+
+        char5.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
+        char6.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
+        char7.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
+        char8.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
     }
 
     private void selecPersonaje(ClickEvent e)
     {
         VisualElement person = e.target as VisualElement;
         perSelec = person.userData as Personaje;
+        if (perSelec.EquipA == "EspadaSagrada")
+        {
+            atkDisplay.Estado = 3;
+        }else if (perSelec.EquipA == "ChanclaMaldita")
+        {
+            atkDisplay.Estado = 0;
+        }
+        else
+        {
+            atkDisplay.Estado = perSelec.Atk;
+        }
 
-        atkDisplay.Estado = perSelec.Atk;
-        defDisplay.Estado = perSelec.Def;
+        if (perSelec.EquipB == "EscudoDiamante")
+        {
+            defDisplay.Estado = 3;
+        }
+        else if (perSelec.EquipB == "Creeper")
+        {
+            defDisplay.Estado = 0;
+        }
+        else
+        {
+            defDisplay.Estado = perSelec.Def;
+        }
         spdDisplay.Estado = perSelec.Speed;
         matkDisplay.Estado = perSelec.Matk;
         mdefDisplay.Estado = perSelec.Mdef;
+    }
+
+    private void selecPersonajeEquipment(ClickEvent e)
+    {
+        VisualElement person = e.target as VisualElement;
+        perSelec = person.userData as Personaje;
+        Debug.Log(perSelec.Nombre);
+
+        switch (perSelec.Nombre)
+        {
+            case "Sans":
+                sansEquipPage.style.display = DisplayStyle.Flex;
+                onceEquipPage.style.display = DisplayStyle.None;
+                trironEquipPage.style.display = DisplayStyle.None;
+                yoelEquipPage.style.display = DisplayStyle.None;
+                break;
+
+            case "Once-ler":
+                sansEquipPage.style.display = DisplayStyle.None;
+                onceEquipPage.style.display = DisplayStyle.Flex;
+                trironEquipPage.style.display = DisplayStyle.None;
+                yoelEquipPage.style.display = DisplayStyle.None;
+                break;
+
+            case "Tritonman":
+                sansEquipPage.style.display = DisplayStyle.None;
+                onceEquipPage.style.display = DisplayStyle.None;
+                trironEquipPage.style.display = DisplayStyle.Flex;
+                yoelEquipPage.style.display = DisplayStyle.None;
+                break;
+
+            case "Yoel":
+                sansEquipPage.style.display = DisplayStyle.None;
+                onceEquipPage.style.display = DisplayStyle.None;
+                trironEquipPage.style.display = DisplayStyle.None;
+                yoelEquipPage.style.display = DisplayStyle.Flex;
+                break;
+
+            default:
+                break;
+        }
     }
 
     private void ChangeToCharacters(ClickEvent e)
@@ -177,6 +333,10 @@ public class MainScript : MonoBehaviour
             equipPageSelector.RemoveFromClassList("unactivemarks");
             equipPageSelector.AddToClassList("marks");
             pageActive = 1;
+            sansEquipPage.style.display = DisplayStyle.None;
+            onceEquipPage.style.display = DisplayStyle.None;
+            trironEquipPage.style.display = DisplayStyle.None;
+            yoelEquipPage.style.display = DisplayStyle.None;
         }
     }
 
@@ -242,7 +402,16 @@ public class MainScript : MonoBehaviour
             pageActive = 3;
         }
     }
-
+    void CambiarItemA(VisualElement pers, ChangeEvent<string> evt)
+    {
+        perSelec = pers.userData as Personaje;
+        perSelec.EquipA = evt.newValue;
+    }
+    void CambiarItemB(VisualElement pers, ChangeEvent<string> evt)
+    {
+        perSelec = pers.userData as Personaje;
+        perSelec.EquipB = evt.newValue;
+    }
     // Start is called before the first frame update
     void Start()
     {
