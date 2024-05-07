@@ -23,7 +23,7 @@
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/MainStyles.uss"
+                        "m_OldPath": "Assets/Resources/MainStyles.uss"
                     }
                 ],
                 "m_OpenendVisualTreeAssetOldPath": "Assets/MainDocument.uxml",
@@ -40,15 +40,15 @@
                 "m_Settings": {
                     "UxmlGuid": "1518fb38824d3ad419d768fb63c81ed3",
                     "UxmlPath": "Assets/MainDocument.uxml",
-                    "CanvasX": 0,
+                    "CanvasX": 1,
                     "CanvasY": 0,
-                    "CanvasWidth": 671,
+                    "CanvasWidth": 682,
                     "CanvasHeight": 459,
                     "MatchGameView": false,
-                    "ZoomScale": 0.8999999761581421,
+                    "ZoomScale": 0.8500000238418579,
                     "PanOffset": {
-                        "x": 34.1812629699707,
-                        "y": 83.56736755371094
+                        "x": 75.80645751953125,
+                        "y": 114.75656127929688
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
