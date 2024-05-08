@@ -40,17 +40,13 @@ public class MainScript : MonoBehaviour
     VisualElement trironEquipPage;
     VisualElement yoelEquipPage;
 
-    DropdownField _listaObjsASans;
-    DropdownField _listaObjsBSans;
+    DropdownField _listaObjsASans, _listaObjsBSans;
 
-    DropdownField _listaObjsAOnce;
-    DropdownField _listaObjsBOnce;
+    DropdownField _listaObjsAOnce, _listaObjsBOnce;
 
-    DropdownField _listaObjsATriton;
-    DropdownField _listaObjsBTriton;
+    DropdownField _listaObjsATriton, _listaObjsBTriton;
 
-    DropdownField _listaObjsAYoel;
-    DropdownField _listaObjsBYoel;
+    DropdownField _listaObjsAYoel, _listaObjsBYoel;
 
     int pageActive;
 
@@ -65,10 +61,11 @@ public class MainScript : MonoBehaviour
     VisualElement char3;
     VisualElement char4;
 
-    VisualElement char5;
-    VisualElement char6;
-    VisualElement char7;
-    VisualElement char8;
+    VisualElement char5, char6, char7, char8;
+    
+    VisualElement desc1, desc2, desc3, desc4;
+
+    Personaje per1, per2, per3, per4;
 
     Personaje perSelec;
     List<Personaje> list_per;
@@ -150,12 +147,12 @@ public class MainScript : MonoBehaviour
         _listaObjsBYoel.RegisterValueChangedCallback((value) => CambiarItemB(char8, value));
 
 
-
-
-        //TODO: A�adir los manipuladores a las instancias una vez hayamos terminado la template de personaje
+        //TODO: A�adir los manipuladores a las instancias una vez hayamos terminado la template de personaje
         //y tengamos las templates unpackeadas
         InitPersonajes();
+        UpdateDescObjects();
 
+        
         //[...]
 
         characterPage.style.display = DisplayStyle.Flex;
@@ -198,6 +195,89 @@ public class MainScript : MonoBehaviour
         char6.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
         char7.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
         char8.RegisterCallback<ClickEvent>(selecPersonajeEquipment);
+    }
+
+    private void UpdateDescObjects()
+    {
+        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+
+        desc1 = root.Q("Desc1");
+        desc2 = root.Q("Desc2");
+        desc3 = root.Q("Desc3");
+        desc4 = root.Q("Desc4");
+
+        per1 = char1.userData as Personaje;
+        per2 = char2.userData as Personaje;
+        per3 = char3.userData as Personaje;
+        per4 = char4.userData as Personaje;
+
+        //Descripcion Objetos de Sans
+        Label texto1A = root.Q<Label>("Desc1A");
+        Label texto1B = root.Q<Label>("Desc1B");
+        string text1A, text1B;
+        if (per1.EquipA == "EspadaSagrada") text1A = "EquipA: Espada proveniente de las tierras de dios";
+        else if (per1.EquipA == "ChanclaMaldita") text1A = "EquipA: Chancla capaz de revertir el golpe hacia su dueño";
+        else text1A = "EquipA: Nada";
+
+        if (per1.EquipB == "EscudoDiamante") text1B = "EquipB: Escudo mas duro que el acero";
+        else if (per1.EquipB == "Creeper") text1B = "EquipB: Te explota en la cara cada vez que atacas";
+        else text1B = "EquipB: Nada";
+
+        texto1A.text = @"<i>" + text1A + "</i>";
+        texto1B.text = @"<i>" + text1B + "</i>";
+        desc1.Add(texto1A);
+        desc1.Add(texto1B);
+
+        //Descripcion Objetos de Once-ler
+        Label texto2A = root.Q<Label>("Desc2A");
+        Label texto2B = root.Q<Label>("Desc2B");
+        string text2A, text2B;
+        if (per2.EquipA == "EspadaSagrada") text2A = "EquipA: Espada proveniente de las tierras de dios";
+        else if (per2.EquipA == "ChanclaMaldita") text2A = "EquipA: Chancla capaz de revertir el golpe hacia su dueño";
+        else text2A = "EquipA: Nada";
+
+        if (per2.EquipB == "EscudoDiamante") text2B = "EquipB: Escudo mas duro que el acero";
+        else if (per2.EquipB == "Creeper") text2B = "EquipB: Te explota en la cara cada vez que atacas";
+        else text2B = "EquipB: Nada";
+
+        texto2A.text = @"<i>" + text2A + "</i>";
+        texto2B.text = @"<i>" + text2B + "</i>";
+        desc2.Add(texto2A);
+        desc2.Add(texto2B);
+
+        //Descripcion Objetos de Tritonman
+        Label texto3A = root.Q<Label>("Desc3A");
+        Label texto3B = root.Q<Label>("Desc3B");
+        string text3A, text3B;
+        if (per3.EquipA == "EspadaSagrada") text3A = "EquipA: Espada proveniente de las tierras de dios";
+        else if (per3.EquipA == "ChanclaMaldita") text3A = "EquipA: Chancla capaz de revertir el golpe hacia su dueño";
+        else text3A = "EquipA: Nada";
+
+        if (per3.EquipB == "EscudoDiamante") text3B = "EquipB: Escudo mas duro que el acero";
+        else if (per3.EquipB == "Creeper") text3B = "EquipB: Te explota en la cara cada vez que atacas";
+        else text3B = "EquipB: Nada";
+
+        texto3A.text = @"<i>" + text3A + "</i>";
+        texto3B.text = @"<i>" + text3B + "</i>";
+        desc3.Add(texto3A);
+        desc3.Add(texto3B);
+
+        //Descripcion Objetos de Yoel
+        Label texto4A = root.Q<Label>("Desc4A");
+        Label texto4B = root.Q<Label>("Desc4B");
+        string text4A, text4B;
+        if (per4.EquipA == "EspadaSagrada") text4A = "EquipA: Espada proveniente de las tierras de dios";
+        else if (per4.EquipA == "ChanclaMaldita") text4A = "EquipA: Chancla capaz de revertir el golpe hacia su dueño";
+        else text4A = "EquipA: Nada";
+
+        if (per4.EquipB == "EscudoDiamante") text4B = "EquipB: Escudo mas duro que el acero";
+        else if (per4.EquipB == "Creeper") text4B = "EquipB: Te explota en la cara cada vez que atacas";
+        else text4B = "EquipB: Nada";
+
+        texto4A.text = @"<i>" + text4A + "</i>";
+        texto4B.text = @"<i>" + text4B + "</i>";
+        desc4.Add(texto4A);
+        desc4.Add(texto4B);
     }
 
     private void selecPersonaje(ClickEvent e)
@@ -272,6 +352,7 @@ public class MainScript : MonoBehaviour
             default:
                 break;
         }
+        UpdateDescObjects();
     }
 
     private void ChangeToCharacters(ClickEvent e)
@@ -406,11 +487,13 @@ public class MainScript : MonoBehaviour
     {
         perSelec = pers.userData as Personaje;
         perSelec.EquipA = evt.newValue;
+        UpdateDescObjects();
     }
     void CambiarItemB(VisualElement pers, ChangeEvent<string> evt)
     {
         perSelec = pers.userData as Personaje;
         perSelec.EquipB = evt.newValue;
+        UpdateDescObjects();
     }
     // Start is called before the first frame update
     void Start()

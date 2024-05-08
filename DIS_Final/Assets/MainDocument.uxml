@@ -7,7 +7,7 @@
         <ui:VisualElement name="SettingsMark" class="unactivemarks" />
     </ui:VisualElement>
     <ui:VisualElement name="Menus" style="flex-grow: 1; height: 500px; flex-direction: row; align-self: auto; justify-content: flex-start;">
-        <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row; display: flex; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
+        <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
             <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; background-color: rgb(239, 227, 213); width: 254px;">
                 <ui:VisualElement name="Sans">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
@@ -99,7 +99,7 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Menu2" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
+        <ui:VisualElement name="Menu2" style="flex-grow: 1; flex-direction: row; display: flex; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
             <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; background-color: rgb(239, 227, 213); width: 254px;">
                 <ui:VisualElement name="SansE">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
@@ -167,7 +167,10 @@
                                 <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; flex-shrink: initial;" />
                                 <ui:DropdownField name="ObjsDefSans" style="flex-shrink: 1; flex-grow: 1;" />
                             </ui:VisualElement>
-                            <ui:VisualElement style="flex-grow: 1; height: 20px;" />
+                            <ui:VisualElement name="Desc1" style="flex-grow: 1; height: 20px;">
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc1A" />
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc1B" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -183,7 +186,10 @@
                                 <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; flex-shrink: initial;" />
                                 <ui:DropdownField name="ObjsDefOnce" style="flex-shrink: 1; flex-grow: 1;" />
                             </ui:VisualElement>
-                            <ui:VisualElement style="flex-grow: 1; height: 20px;" />
+                            <ui:VisualElement name="Desc2" style="flex-grow: 1; height: 20px;">
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc2A" />
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc2B" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -199,7 +205,10 @@
                                 <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; flex-shrink: initial;" />
                                 <ui:DropdownField name="ObjsDefTriton" style="flex-shrink: 1; flex-grow: 1;" />
                             </ui:VisualElement>
-                            <ui:VisualElement style="flex-grow: 1; height: 20px;" />
+                            <ui:VisualElement name="Desc3" style="flex-grow: 1; height: 20px;">
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc3A" />
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc3B" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -215,7 +224,10 @@
                                 <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; flex-shrink: initial;" />
                                 <ui:DropdownField name="ObjsDefYoel" style="flex-shrink: 1; flex-grow: 1;" />
                             </ui:VisualElement>
-                            <ui:VisualElement style="flex-grow: 1; height: 20px;" />
+                            <ui:VisualElement name="Desc4" style="flex-grow: 1; height: 20px;">
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc4A" />
+                                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Desc4B" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
