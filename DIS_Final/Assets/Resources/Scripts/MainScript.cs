@@ -22,6 +22,12 @@ public class MainScript : MonoBehaviour
             "Creeper",
             "Nada"
         };
+    List<string> _res = new List<string>()
+        {
+            "720 x 1280",
+            "1080 x 1920",
+            "1440 x 2560"
+        };
 
 
     VisualElement characterPageSelector;
@@ -48,6 +54,9 @@ public class MainScript : MonoBehaviour
 
     DropdownField _listaObjsAYoel, _listaObjsBYoel;
 
+
+    DropdownField _resOptions;
+
     int pageActive;
 
     StatDisplay atkDisplay;
@@ -64,6 +73,11 @@ public class MainScript : MonoBehaviour
     VisualElement nameAndLevelStatsDisplay;
 
     Label name, level;
+
+    VisualElement _itemDescDisplay;
+    Label _itemdesc;
+
+    VisualElement item1, item2, item3, item4;
 
     VisualElement char5, char6, char7, char8;
     
@@ -110,6 +124,22 @@ public class MainScript : MonoBehaviour
         level = characterPage.Q<Label>("level");
 
 
+        _itemDescDisplay = itemPage.Q<VisualElement>("textositems");
+
+        _itemdesc = itemPage.Q<Label>("itemdesc");
+
+        item1 = itemPage.Q<VisualElement>("Pocima");
+        item2 = itemPage.Q<VisualElement>("Frutasdelbosque");
+        item3 = itemPage.Q<VisualElement>("Piedradeinvocacion");
+        item4 = itemPage.Q<VisualElement>("cigarro");
+
+
+        item1.RegisterCallback<ClickEvent>(selecItem);
+        item2.RegisterCallback<ClickEvent>(selecItem);
+        item3.RegisterCallback<ClickEvent>(selecItem);
+        item4.RegisterCallback<ClickEvent>(selecItem);
+
+
         characterPageSelector.RegisterCallback<ClickEvent>(ChangeToCharacters);
         equipPageSelector.RegisterCallback<ClickEvent>(ChangeToEquipment);
         itemPageSelector.RegisterCallback<ClickEvent>(ChangeToItems);
@@ -120,6 +150,8 @@ public class MainScript : MonoBehaviour
         settingsPageSelector.AddManipulator(new ButtonManipulator());
 
 
+        _resOptions = root.Q<DropdownField>("resolucion");
+        _resOptions.choices = _res;
 
 
         char5 = equipPage.Q<VisualElement>("SansE");
@@ -292,6 +324,37 @@ public class MainScript : MonoBehaviour
         texto4B.text = @"<i>" + text4B + "</i>";
         desc4.Add(texto4A);
         desc4.Add(texto4B);
+    }
+
+    private void selecItem(ClickEvent e)
+    {
+        VisualElement item = e.target as VisualElement;
+        switch (item.name)
+        {
+            case "Pocima":
+
+                _itemdesc.text = @"<i> te cura 50 hp</i>";
+                _itemDescDisplay.Add(_itemdesc);
+                break;
+            case "Frutasdelbosque":
+
+                _itemdesc.text = @"<i> Las frutas del bosque son un manjar que crece como fruto de los árboles del 
+bosque encantado de mdoiaosda las cuales son un atractivo afrodisiaco para los osos, tiralas, 
+por muy buenas que estén no quieres que un oso te las huela ni dentro ni fuera de tí</i>";
+                _itemDescDisplay.Add(_itemdesc);
+                break;
+            case "Piedradeinvocacion":
+
+                _itemdesc.text = @"<i> no es de ivocacion, es una piedra del riñon en verdad, atrae osos</i>";
+                _itemDescDisplay.Add(_itemdesc);
+                break;
+            case "cigarro":
+
+                _itemdesc.text = @"<i> queres?</i>";
+                _itemDescDisplay.Add(_itemdesc);
+                break;
+        }
+
     }
 
     private void selecPersonaje(ClickEvent e)
