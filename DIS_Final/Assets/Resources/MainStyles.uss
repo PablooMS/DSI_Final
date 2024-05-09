@@ -79,3 +79,11 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+.lifebar {
+    flex-grow: 0;
+    width: 321px;
+    bottom: -22px;
+    left: -4px;
+    max-width: 172px;
+}

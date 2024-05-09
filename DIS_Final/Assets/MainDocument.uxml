@@ -1,31 +1,31 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/MainStyles.uss?fileID=7433441132597879392&amp;guid=424357f3b9532c2479e99947d087b621&amp;type=3#MainStyles" />
     <ui:VisualElement name="Windows" style="flex-grow: 1; height: -83px; width: 226px; flex-direction: row; justify-content: flex-end; align-self: flex-start; align-items: flex-end;">
-        <ui:VisualElement name="CharacterMark" class="marks" />
-        <ui:VisualElement name="EquipmentMark" class="unactivemarks" />
-        <ui:VisualElement name="ItemsMark" class="unactivemarks" />
-        <ui:VisualElement name="SettingsMark" class="unactivemarks" />
+        <ui:VisualElement name="CharacterMark" class="marks" style="background-image: resource(&apos;Images/5&apos;);" />
+        <ui:VisualElement name="EquipmentMark" class="unactivemarks" style="background-image: resource(&apos;Images/esPada&apos;);" />
+        <ui:VisualElement name="ItemsMark" class="unactivemarks" style="background-image: resource(&apos;Images/1205715&apos;);" />
+        <ui:VisualElement name="SettingsMark" class="unactivemarks" style="background-image: resource(&apos;Images/ass&apos;);" />
     </ui:VisualElement>
     <ui:VisualElement name="Menus" style="flex-grow: 1; height: 500px; flex-direction: row; align-self: auto; justify-content: flex-start;">
         <ui:VisualElement name="Menu1" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
             <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; background-color: rgb(239, 227, 213); width: 254px;">
                 <ui:VisualElement name="Sans">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
-                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; flex-direction: row;">
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/sans&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Sans" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
                                 <ui:Label tabindex="-1" text="Lv. 1" parse-escape-sequences="false" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 14px;" />
                             </ui:VisualElement>
-                            <ui:VisualElement name="lifebar" picking-mode="Ignore" class="lifebar" style="flex-grow: 0; width: 321px;" />
+                            <ui:VisualElement name="lifebar" picking-mode="Ignore" class="lifebar" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="Once">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/queHagoConMiVida&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Once-Ler" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="false" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -38,7 +38,7 @@
                 <ui:VisualElement name="Triton">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/tritonma&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Tritonman" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -51,7 +51,7 @@
                 <ui:VisualElement name="Yoel">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/jovanni&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Yoel" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -64,33 +64,38 @@
             </ui:VisualElement>
             <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px; width: 254px;">
                 <ui:VisualElement name="CharacterDisplay" class="roundItem" style="flex-grow: 1; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; flex-shrink: initial;">
-                    <ui:VisualElement name="MiniDisplay" style="flex-grow: 1; height: 10px; flex-shrink: initial;" />
+                    <ui:VisualElement name="MiniDisplay" style="flex-grow: 1; height: 10px; flex-shrink: initial; flex-direction: row; align-items: center; justify-content: center; align-self: flex-start;">
+                        <ui:VisualElement name="selectedCharacter" picking-mode="Ignore" style="flex-grow: 1; height: 36px; flex-direction: row; align-items: flex-end; justify-content: flex-start; width: 93px; right: -61px; top: -12px;">
+                            <ui:Label tabindex="-1" text="Sans" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" name="name" class="charactertext" style="font-size: 18px;" />
+                            <ui:Label tabindex="-1" text="Lv. 1" parse-escape-sequences="false" display-tooltip-when-elided="true" picking-mode="Ignore" name="level" class="charactertext" style="font-size: 14px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                     <ui:VisualElement name="Data" style="flex-grow: 1; height: 217px; flex-shrink: initial; flex-direction: row;">
                         <ui:VisualElement name="Left" style="flex-grow: 1; flex-shrink: initial; width: 100px;">
                             <ui:VisualElement name="Atk" style="flex-grow: 1; height: 20px; justify-content: center; flex-direction: row; flex-shrink: initial;">
-                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px;" />
+                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; background-image: resource(&apos;Images/esPada&apos;);" />
                                 <StatDisplay estado="0" name="atkDis" style="align-items: center; width: 150px; flex-grow: 1;" />
                             </ui:VisualElement>
                             <ui:VisualElement style="flex-grow: 1; height: 20px;" />
                             <ui:VisualElement name="Def" style="flex-grow: 1; height: 20px; flex-direction: row; flex-shrink: initial;">
-                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px;" />
+                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; background-image: resource(&apos;Images/esCudo&apos;);" />
                                 <StatDisplay name="defDis" style="width: 150px; flex-grow: 1; align-self: center;" />
                             </ui:VisualElement>
                             <ui:VisualElement style="flex-grow: 1; height: 20px;" />
                             <ui:VisualElement name="Speed" tabindex="0" style="flex-grow: 1; height: 20px; flex-direction: row; flex-shrink: initial;">
-                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px;" />
+                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; background-image: resource(&apos;Images/boot&apos;);" />
                                 <StatDisplay estado="0" name="spdDis" style="width: 150px; flex-grow: 1; align-self: center;" />
                             </ui:VisualElement>
                         </ui:VisualElement>
                         <ui:VisualElement name="Right" style="flex-grow: 1; width: 100px;">
                             <ui:VisualElement style="flex-grow: 1;" />
                             <ui:VisualElement name="MAtk" style="flex-grow: 1; height: 20px; justify-content: center; flex-direction: row; flex-shrink: initial;">
-                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px;" />
+                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; background-image: resource(&apos;Images/orb&apos;);" />
                                 <StatDisplay estado="0" name="matkDis" style="align-items: center; width: 150px; flex-grow: 1;" />
                             </ui:VisualElement>
                             <ui:VisualElement style="flex-grow: 1;" />
                             <ui:VisualElement name="MDef" style="flex-grow: 1; height: 20px; justify-content: center; flex-direction: row; flex-shrink: initial;">
-                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px;" />
+                                <ui:VisualElement name="Img" style="flex-grow: 1; width: 50px; background-image: resource(&apos;Images/escapaDeAquiMientrasTodaviaPuedas&apos;);" />
                                 <StatDisplay estado="0" name="mdefDis" style="align-items: center; width: 150px; flex-grow: 1;" />
                             </ui:VisualElement>
                             <ui:VisualElement name="mdefDis" style="flex-grow: 1;" />
@@ -99,12 +104,12 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Menu2" style="flex-grow: 1; flex-direction: row; display: flex; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial;">
+        <ui:VisualElement name="Menu2" style="flex-grow: 1; flex-direction: row; display: flex; visibility: visible; align-self: auto; justify-content: space-around; align-items: stretch; flex-wrap: nowrap; flex-shrink: initial; overflow: visible;">
             <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; background-color: rgb(239, 227, 213); width: 254px;">
                 <ui:VisualElement name="SansE">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/sans&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Sans" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -117,7 +122,7 @@
                 <ui:VisualElement name="OnceE">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/queHagoConMiVida&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Once-Ler" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="false" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -130,7 +135,7 @@
                 <ui:VisualElement name="TritonE">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/tritonma&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Tritonman" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -143,7 +148,7 @@
                 <ui:VisualElement name="YoelE">
                     <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
                     <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;">
-                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto;" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/jovanni&apos;);" />
                         <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 374px;">
                             <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
                                 <ui:Label tabindex="-1" text="Yoel" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
@@ -234,8 +239,69 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Menu3" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible; flex-shrink: initial;">
-            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; width: 254px;" />
-            <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px; width: 254px;" />
+            <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; width: 254px;">
+                <ui:VisualElement name="Pocima">
+                    <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; flex-direction: row; padding-top: -31px; padding-right: -31px; padding-bottom: -31px; padding-left: -31px; max-height: 176px; height: 83px;">
+                        <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 307px; flex-direction: column; align-items: center; justify-content: center; align-self: center; height: 31px;">
+                            <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+                                <ui:Label tabindex="-1" text="Pócima" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Frutasdelbosque">
+                    <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; flex-direction: row; padding-top: -31px; padding-right: -31px; padding-bottom: -31px; padding-left: -31px; max-height: 176px; height: 83px;">
+                        <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 307px; flex-direction: column; align-items: center; justify-content: center; align-self: center; height: 31px;">
+                            <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+                                <ui:Label tabindex="-1" text="Frutas del Bosque" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Piedradeinvocacion">
+                    <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; flex-direction: row; padding-top: -31px; padding-right: -31px; padding-bottom: -31px; padding-left: -31px; max-height: 176px; height: 83px;">
+                        <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 307px; flex-direction: column; align-items: center; justify-content: center; align-self: center; height: 31px;">
+                            <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+                                <ui:Label tabindex="-1" text="Piedra de invocaión" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="cigarro">
+                    <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; flex-direction: row; padding-top: -31px; padding-right: -31px; padding-bottom: -31px; padding-left: -31px; max-height: 176px; height: 83px;">
+                        <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 307px; flex-direction: column; align-items: center; justify-content: center; align-self: center; height: 31px;">
+                            <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+                                <ui:Label tabindex="-1" text="Cigarro" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="PageRight" class="page" style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 10px; width: 254px;">
+                <ui:VisualElement name="textos">
+                    <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: auto; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; flex-direction: row; padding-top: -31px; padding-right: -31px; padding-bottom: -31px; padding-left: -31px; max-height: 176px; height: 483px;">
+                        <ui:VisualElement name="node" picking-mode="Ignore" style="flex-grow: 0; width: 307px; flex-direction: column; align-items: center; justify-content: center; align-self: center; height: 31px;">
+                            <ui:VisualElement name="texts" picking-mode="Ignore" style="flex-grow: 1; height: 52px; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+                                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="charactertext" style="font-size: 18px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="textos" style="height: 161px;">
+                    <Style src="project://database/Assets/Resources/JosePutero.uss?fileID=7433441132597879392&amp;guid=938c2293af8e45c43b7d673d1e406580&amp;type=3#JosePutero" />
+                    <ui:VisualElement name="Personaje" picking-mode="Ignore" class="pcback" style="width: 262px; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px; flex-direction: row; padding-top: -31px; padding-right: -31px; padding-bottom: -31px; padding-left: -31px; max-height: 176px; height: 165px; align-items: stretch;">
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/sans&apos;);" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/queHagoConMiVida&apos;);" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 76px; height: auto; background-image: resource(&apos;Images/jovanni&apos;);" />
+                        <ui:VisualElement name="ImageCanvas" picking-mode="Ignore" class="imageback" style="flex-grow: 0; align-items: flex-start; align-self: auto; width: 84px; height: auto; background-image: resource(&apos;Images/tritonma&apos;);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Menu4" style="flex-grow: 1; flex-direction: row; display: none; visibility: visible; flex-shrink: initial;">
             <ui:VisualElement name="PageLeft" class="page" style="flex-grow: 1; border-top-left-radius: 10px; width: 254px;" />
