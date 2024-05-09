@@ -60,6 +60,10 @@ public class MainScript : MonoBehaviour
     VisualElement char2;
     VisualElement char3;
     VisualElement char4;
+    
+    VisualElement nameAndLevelStatsDisplay;
+
+    Label name, level;
 
     VisualElement char5, char6, char7, char8;
     
@@ -99,6 +103,11 @@ public class MainScript : MonoBehaviour
         char2 = characterPage.Q<VisualElement>("Once");
         char3 = characterPage.Q<VisualElement>("Triton");
         char4 = characterPage.Q<VisualElement>("Yoel");
+
+        nameAndLevelStatsDisplay = characterPage.Q<VisualElement>("selectedCharacter");
+        
+        name = characterPage.Q<Label>("name");
+        level = characterPage.Q<Label>("level");
 
 
         characterPageSelector.RegisterCallback<ClickEvent>(ChangeToCharacters);
@@ -164,6 +173,11 @@ public class MainScript : MonoBehaviour
 
     private void InitPersonajes()
     {
+        name.text = @"<i> </i>";
+        level.text = @"<i> </i>";
+        nameAndLevelStatsDisplay.Add(name);
+        nameAndLevelStatsDisplay.Add(level);
+
         list_per = new List<Personaje>();
         Personaje sans = new Personaje("Sans", 1, 2, 0, 2, 0, 3, "", "");
         Personaje logcel = new Personaje("Once-ler", 34, 3, 1, 0, 3, 2, "", "");
@@ -311,6 +325,13 @@ public class MainScript : MonoBehaviour
         spdDisplay.Estado = perSelec.Speed;
         matkDisplay.Estado = perSelec.Matk;
         mdefDisplay.Estado = perSelec.Mdef;
+
+        
+        name.text = @"<i>" + perSelec.Nombre + "</i>";
+        level.text = @"<i>Lv. " + perSelec.Level + "</i>";
+        nameAndLevelStatsDisplay.Add(name);
+        nameAndLevelStatsDisplay.Add(level);
+
     }
 
     private void selecPersonajeEquipment(ClickEvent e)
@@ -357,6 +378,15 @@ public class MainScript : MonoBehaviour
 
     private void ChangeToCharacters(ClickEvent e)
     {
+        atkDisplay.Estado = 0;
+        defDisplay.Estado = 0;
+        spdDisplay.Estado = 0;
+        matkDisplay.Estado = 0;
+        mdefDisplay.Estado = 0;
+        name.text = @"<i> </i>";
+        level.text = @"<i> </i>";
+        nameAndLevelStatsDisplay.Add(name);
+        nameAndLevelStatsDisplay.Add(level);
         if (pageActive != 0)
         {
             switch (pageActive)
